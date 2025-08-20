@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'KAZVIS REALTY - Luxury Real Estate San Francisco',
+  title: 'KAZVISK REALTY - Luxury Real Estate San Francisco',
   description: 'Extraordinary living begins here. Timeless architecture, exclusive locations, and unparalleled luxury in San Francisco real estate.',
   keywords: 'luxury real estate, San Francisco, premium properties, high-end homes',
   openGraph: {
-    title: 'KAZVIS REALTY - Luxury Real Estate San Francisco',
+    title: 'KAZVISK REALTY - Luxury Real Estate San Francisco',
     description: 'Extraordinary living begins here. Timeless architecture, exclusive locations, and unparalleled luxury.',
     type: 'website',
   },

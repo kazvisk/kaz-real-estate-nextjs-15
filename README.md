@@ -1,4 +1,4 @@
-# KAZVIS REALTY - Luxury Real Estate Website
+# KAZVISK REALTY - Luxury Real Estate Website
 
 A sophisticated Next.js 14 website for luxury real estate in San Francisco, featuring modern design, smooth animations, and professional code structure.
 
@@ -53,7 +53,7 @@ Visit [http://localhost:3000](http://localhost:3000) to view the website.
 
 ### Typography Hierarchy
 ```
-Logo: KAZVIS REALTY
+Logo: KAZVISK REALTY
 - Font: Manrope 700
 - Size: 24px desktop, 20px mobile
 - Color: White
@@ -143,5 +143,5 @@ This website embodies luxury real estate principles:
 
 ## 📄 License
 
-Private luxury real estate website for KAZVIS REALTY.
+Private luxury real estate website for KAZVISK REALTY.
 

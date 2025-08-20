@@ -18,7 +18,7 @@ Create a luxury hero header that exactly matches `brand_assets/reference.jpeg` u
 
 ### Typography Hierarchy
 ```
-Logo: "KAZVIS REALTY" (top-left)
+Logo: "KAZVISK REALTY" (top-left)
 - Font: Manrope 700
 - Size: 24px desktop, 20px mobile
 - Color: White
