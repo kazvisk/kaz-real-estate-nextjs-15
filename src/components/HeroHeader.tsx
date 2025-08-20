@@ -6,12 +6,17 @@ import { AnimatedText } from './AnimatedText'
 
 export default function HeroHeader() {
   const [mounted, setMounted] = useState(false)
+  const [videoLoaded, setVideoLoaded] = useState(false)
   
   const actionWords = ['buy.', 'sell.', 'invest.', 'grow.']
 
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  const handleVideoLoad = () => {
+    setVideoLoaded(true)
+  }
 
   if (!mounted) return null
 
@@ -26,11 +31,13 @@ export default function HeroHeader() {
       <div className="absolute inset-0">
         <video 
           className="w-full h-full object-cover"
+          poster="/videos/poster.jpg"
           loop
           muted
           autoPlay
           playsInline
-          preload="metadata"
+          preload="none"
+          onLoadedData={handleVideoLoad}
         >
           <source 
             src="/videos/final.webm" 
