@@ -19,17 +19,31 @@ export default function HeroHeader() {
     <section 
       className="relative h-screen w-full overflow-hidden"
       style={{
-        background: 'linear-gradient(135deg, #7bb3d9 0%, #5a9bd4 50%, #4a8bc2 100%)',
         fontFamily: 'Manrope, sans-serif'
       }}
     >
-      {/* Subtle radial gradient overlay for depth */}
-      <div 
-        className="absolute inset-0"
-        style={{
-          background: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)'
-        }}
-      />
+      {/* Video Background */}
+      <div className="absolute inset-0">
+        <video 
+          className="w-full h-full object-cover"
+          loop
+          muted
+          autoPlay
+          playsInline
+          preload="metadata"
+        >
+          <source 
+            src="/videos/final.webm" 
+            type="video/webm" 
+          />
+          <source 
+            src="/videos/final.mp4" 
+            type="video/mp4" 
+          />
+        </video>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
 
       {/* Navigation Bar */}
       <nav className="relative z-20 flex items-center justify-between px-8 md:px-16 py-8 text-white">
