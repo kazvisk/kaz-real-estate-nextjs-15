@@ -61,7 +61,7 @@ export default function NotFound() {
           className="mb-8 max-w-2xl"
         >
           <h2 className="text-3xl md:text-4xl font-medium text-white mb-4">
-            This Property Has Been Sold
+            This Page Got a Better Offer Elsewhere
           </h2>
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
             The page you're looking for seems to have moved on to new opportunities. 
