@@ -32,9 +32,12 @@ export default function HeroHeader() {
 
   return (
     <section 
-      className="relative h-screen w-full overflow-hidden"
+      className="relative w-full overflow-hidden"
       style={{
-        fontFamily: 'Manrope, sans-serif'
+        fontFamily: 'Manrope, sans-serif',
+        height: '100vh',
+        minHeight: '100vh',
+        maxHeight: '100vh'
       }}
     >
       {/* Video Background with Poster Fallback */}
@@ -175,7 +178,7 @@ export default function HeroHeader() {
 
       {/* Mobile-only contact buttons */}
       {isMobile && (
-        <div className="absolute bottom-8 right-8 z-30 flex flex-col gap-4">
+        <div className="fixed bottom-8 right-8 z-30 flex flex-col gap-4">
           {/* Email button */}
           <a 
             href="mailto:kaz@kazviskrealty.com"
