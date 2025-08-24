@@ -51,14 +51,17 @@ export default function HeroHeader() {
         {/* Video overlay - only shows when loaded and NOT mobile */}
         {!isMobile && (
           <video 
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover z-15"
+            style={{ 
+              opacity: videoLoaded ? 1 : 0,
+              zIndex: 15
+            }}
             loop
             muted
             autoPlay
             playsInline
             preload="metadata"
             onLoadedData={handleVideoLoad}
-            style={{ opacity: videoLoaded ? 1 : 0 }}
           >
             <source 
               src="/videos/final.webm" 
@@ -162,6 +165,53 @@ export default function HeroHeader() {
           </motion.div>
         </div>
       </div>
+
+      {/* Mobile-only contact buttons */}
+      {isMobile && (
+        <div className="absolute bottom-8 right-8 z-30 flex flex-col gap-4">
+          {/* Email button */}
+          <a 
+            href="mailto:kaz@kazviskrealty.com"
+            className="w-14 h-14 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-all duration-300"
+            aria-label="Email Kaz Visk Realty"
+          >
+            <svg 
+              className="w-6 h-6 text-gray-800" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" 
+              />
+            </svg>
+          </a>
+
+          {/* Phone button */}
+          <a 
+            href="tel:+14155133387"
+            className="w-14 h-14 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-all duration-300"
+            aria-label="Call Kaz Visk Realty at 415-513-3387"
+          >
+            <svg 
+              className="w-6 h-6 text-gray-800" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" 
+              />
+            </svg>
+          </a>
+        </div>
+      )}
     </section>
   )
 }
