@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { AnimatedText } from './AnimatedText'
+import { LoadingSpinner } from './LoadingSpinner'
 
 export default function HeroHeader() {
   const [mounted, setMounted] = useState(false)
@@ -36,7 +37,7 @@ export default function HeroHeader() {
           muted
           autoPlay
           playsInline
-          preload="none"
+          preload="metadata"
           onLoadedData={handleVideoLoad}
         >
           <source 
@@ -48,6 +49,12 @@ export default function HeroHeader() {
             type="video/mp4" 
           />
         </video>
+        {/* Loading spinner while video loads */}
+        {!videoLoaded && (
+          <div className="absolute inset-0 bg-black flex items-center justify-center z-10">
+            <LoadingSpinner size="lg" className="text-white" />
+          </div>
+        )}
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/50" />
       </div>
@@ -126,12 +133,14 @@ export default function HeroHeader() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <button 
-              className="px-8 py-4 border-2 border-white bg-transparent text-white font-medium rounded hover:bg-white hover:text-blue-600 transition-all duration-300 ease-in-out"
+              className="px-8 py-4 border-2 border-white bg-transparent text-white font-medium rounded hover:bg-white hover:text-blue-600 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent"
+              aria-label="Find properties to buy"
             >
               Looking to Buy
             </button>
             <button 
-              className="px-8 py-4 border-2 border-white bg-transparent text-white font-medium rounded hover:bg-white hover:text-blue-600 transition-all duration-300 ease-in-out"
+              className="px-8 py-4 border-2 border-white bg-transparent text-white font-medium rounded hover:bg-white hover:text-blue-600 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent"
+              aria-label="Sell your property"
             >
               Looking to Sell
             </button>
