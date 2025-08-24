@@ -31,7 +31,7 @@ export default function HeroHeader() {
       <div className="absolute inset-0">
         <video 
           className="w-full h-full object-cover"
-          poster="/videos/poster.jpg"
+          poster="/videos/poster.webp"
           loop
           muted
           autoPlay
