@@ -164,13 +164,13 @@ export default function HeroHeader() {
 
       {/* Main Content - Centered */}
       <div className="absolute inset-0 flex items-center justify-center z-30 px-4">
-        <div className="text-center max-w-6xl mx-auto">
+        <div className="text-center max-w-6xl mx-auto w-full">
           {/* Animated Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="text-white font-medium mb-8 whitespace-nowrap"
+            className="text-white font-medium mb-8 break-words"
             style={{
               fontSize: 'clamp(2.5rem, 6vw, 7rem)',
               lineHeight: '1.1',
@@ -192,7 +192,7 @@ export default function HeroHeader() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="text-white font-normal max-w-4xl mx-auto mb-12"
+            className="text-white font-normal max-w-4xl mx-auto mb-12 px-4"
             style={{
               fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)',
               lineHeight: '1.6',
@@ -207,7 +207,7 @@ export default function HeroHeader() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.9 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4"
           >
             <a 
               href="mailto:kaz@kazviskrealty.com?subject=Looking to Buy in San Francisco&body=Hi Kaz, I'm interested in buying a property in San Francisco. Please contact me to discuss my needs and how you can help me find the perfect home."
