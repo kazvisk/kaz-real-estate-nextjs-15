@@ -184,13 +184,13 @@ export default function HeroHeader() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <button 
-              className="px-8 py-4 border-2 border-white bg-transparent text-white font-medium rounded hover:bg-white hover:text-blue-600 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent"
+              className="px-8 py-4 bg-white/5 backdrop-blur-sm border-2 border-white text-white font-medium rounded-lg hover:bg-white/15 hover:backdrop-blur-xl hover:border-white/40 transition-all duration-300 shadow-sm hover:shadow-xl"
               aria-label="Find properties to buy"
             >
               Looking to Buy
             </button>
             <button 
-              className="px-8 py-4 border-2 border-white bg-transparent text-white font-medium rounded hover:bg-white hover:text-blue-600 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent"
+              className="px-8 py-4 bg-white/5 backdrop-blur-sm border-2 border-white text-white font-medium rounded-lg hover:bg-white/15 hover:backdrop-blur-xl hover:border-white/40 transition-all duration-300 shadow-sm hover:shadow-xl"
               aria-label="Sell your property"
             >
               Looking to Sell
