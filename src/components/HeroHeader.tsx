@@ -41,8 +41,11 @@ export default function HeroHeader() {
       <div className="absolute inset-0 bg-slate-800">
         {/* Background poster image - always shows */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/videos/poster.jpg)' }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-10"
+          style={{ 
+            backgroundImage: 'url(/videos/poster.jpg)',
+            minHeight: '100vh'
+          }}
         />
         
         {/* Video overlay - only shows when loaded and NOT mobile */}
@@ -68,11 +71,11 @@ export default function HeroHeader() {
           </video>
         )}
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/50 z-20" />
       </div>
 
       {/* Navigation Bar */}
-      <nav className="relative z-20 flex items-center justify-between px-8 md:px-16 py-8 text-white">
+      <nav className="relative z-30 flex items-center justify-between px-8 md:px-16 py-8 text-white">
         {/* Logo */}
         <div className="text-white font-medium text-lg">
           KAZ VISK REALTY
@@ -98,7 +101,7 @@ export default function HeroHeader() {
       </nav>
 
       {/* Main Content - Centered */}
-      <div className="absolute inset-0 flex items-center justify-center z-10 px-4">
+      <div className="absolute inset-0 flex items-center justify-center z-30 px-4">
         <div className="text-center max-w-6xl mx-auto">
           {/* Animated Headline */}
           <motion.h1
