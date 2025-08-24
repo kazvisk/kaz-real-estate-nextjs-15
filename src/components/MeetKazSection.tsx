@@ -150,7 +150,7 @@ export default function MeetKazSection() {
 
                 {/* Website Icon */}
                 <a
-                  href="https://vanguardproperties.com"
+                  href="https://vanguardproperties.com/agents/kaz-visk"
                   className="w-12 h-12 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center hover:bg-white/15 hover:border-white/30 transition-all duration-300 group"
                   aria-label="Vanguard Properties"
                 >

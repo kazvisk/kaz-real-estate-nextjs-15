@@ -8,6 +8,7 @@ export default function HeroHeader() {
   const [mounted, setMounted] = useState(false)
   const [videoLoaded, setVideoLoaded] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [isLightBackground, setIsLightBackground] = useState(false)
   
   const actionWords = ['buy.', 'sell.', 'invest.', 'grow.']
 
@@ -18,10 +19,24 @@ export default function HeroHeader() {
       setIsMobile(window.innerWidth <= 768 || /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
     }
     
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
+    // Check background lightness based on scroll position
+    const checkBackground = () => {
+      const scrollY = window.scrollY
+      const heroHeight = window.innerHeight
+      // If scrolled past hero section, background is light
+      setIsLightBackground(scrollY > heroHeight * 0.8)
+    }
     
-    return () => window.removeEventListener('resize', checkMobile)
+    checkMobile()
+    checkBackground()
+    
+    window.addEventListener('resize', checkMobile)
+    window.addEventListener('scroll', checkBackground)
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile)
+      window.removeEventListener('scroll', checkBackground)
+    }
   }, [])
 
   const handleVideoLoad = () => {
@@ -182,11 +197,40 @@ export default function HeroHeader() {
           {/* Email button */}
           <a 
             href="mailto:kaz@kazviskrealty.com"
-            className="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/30 rounded-full flex items-center justify-center shadow-2xl hover:bg-white/20 hover:border-white/50 transition-all duration-300"
+            className="w-14 h-14 backdrop-blur-xl rounded-full flex items-center justify-center shadow-2xl transition-all duration-300"
+            style={{
+              backgroundColor: isLightBackground 
+                ? 'rgba(148, 148, 153, 0.15)'  // #949499 with 15% opacity
+                : 'rgba(255, 255, 255, 0.1)',  // White with 10% opacity
+              borderColor: isLightBackground 
+                ? 'rgba(148, 148, 153, 0.25)'  // #949499 with 25% opacity
+                : 'rgba(255, 255, 255, 0.3)',  // White with 30% opacity
+              borderWidth: '1px',
+              borderStyle: 'solid'
+            }}
+            onMouseEnter={(e) => {
+              if (isLightBackground) {
+                e.currentTarget.style.backgroundColor = 'rgba(148, 148, 153, 0.25)'
+                e.currentTarget.style.borderColor = 'rgba(148, 148, 153, 0.35)'
+              } else {
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.5)'
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (isLightBackground) {
+                e.currentTarget.style.backgroundColor = 'rgba(148, 148, 153, 0.15)'
+                e.currentTarget.style.borderColor = 'rgba(148, 148, 153, 0.25)'
+              } else {
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)'
+              }
+            }}
             aria-label="Email Kaz Visk Realty"
           >
             <svg 
-              className="w-6 h-6 text-white drop-shadow-lg" 
+              className="w-6 h-6 drop-shadow-lg"
+              style={{ color: isLightBackground ? '#949499' : 'white' }}
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
@@ -203,11 +247,40 @@ export default function HeroHeader() {
           {/* Phone button */}
           <a 
             href="tel:+14155133387"
-            className="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/30 rounded-full flex items-center justify-center shadow-2xl hover:bg-white/20 hover:border-white/50 transition-all duration-300"
+            className="w-14 h-14 backdrop-blur-xl rounded-full flex items-center justify-center shadow-2xl transition-all duration-300"
+            style={{
+              backgroundColor: isLightBackground 
+                ? 'rgba(148, 148, 153, 0.15)'  // #949499 with 15% opacity
+                : 'rgba(255, 255, 255, 0.1)',  // White with 10% opacity
+              borderColor: isLightBackground 
+                ? 'rgba(148, 148, 153, 0.25)'  // #949499 with 25% opacity
+                : 'rgba(255, 255, 255, 0.3)',  // White with 30% opacity
+              borderWidth: '1px',
+              borderStyle: 'solid'
+            }}
+            onMouseEnter={(e) => {
+              if (isLightBackground) {
+                e.currentTarget.style.backgroundColor = 'rgba(148, 148, 153, 0.25)'
+                e.currentTarget.style.borderColor = 'rgba(148, 148, 153, 0.35)'
+              } else {
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.5)'
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (isLightBackground) {
+                e.currentTarget.style.backgroundColor = 'rgba(148, 148, 153, 0.15)'
+                e.currentTarget.style.borderColor = 'rgba(148, 148, 153, 0.25)'
+              } else {
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)'
+              }
+            }}
             aria-label="Call Kaz Visk Realty at 415-513-3387"
           >
             <svg 
-              className="w-6 h-6 text-white drop-shadow-lg" 
+              className="w-6 h-6 drop-shadow-lg"
+              style={{ color: isLightBackground ? '#949499' : 'white' }}
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
