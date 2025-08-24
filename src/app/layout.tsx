@@ -3,7 +3,7 @@ import './globals.css'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 
 export const metadata: Metadata = {
-  title: 'KAZ VISK REALTY - Luxury Real Estate San Francisco',
+  title: 'Kaz Visk | Luxury San Francisco Real Estate Agent',
   description: 'Your local partner in real estate — whether you\'re moving in or moving on. Expert guidance for buying, selling, and investing in San Francisco properties.',
   keywords: 'real estate, San Francisco, buy home, sell house, property investment, real estate agent, luxury homes',
   authors: [{ name: 'Kaz Visk Realty' }],
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   publisher: 'Kaz Visk Realty',
   robots: 'index, follow',
   openGraph: {
-    title: 'KAZ VISK REALTY - Your San Francisco Real Estate Partner',
+    title: 'Kaz Visk | Luxury San Francisco Real Estate Agent',
     description: 'Expert real estate services in San Francisco. Helping you buy, sell, invest, and grow your property portfolio.',
     type: 'website',
     locale: 'en_US',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KAZ VISK REALTY - San Francisco Real Estate',
+    title: 'Kaz Visk | Luxury San Francisco Real Estate Agent',
     description: 'Your local partner in real estate — whether you\'re moving in or moving on.',
   },
 }
