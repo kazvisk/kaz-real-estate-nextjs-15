@@ -103,7 +103,7 @@ export default function HeroHeader() {
       </div>
 
       {/* Navigation Bar */}
-      <nav className="relative z-30 flex items-center justify-between px-8 md:px-16 py-8 text-white">
+      <nav className="relative z-40 flex items-center justify-between px-8 md:px-16 py-8 text-white">
         {/* Logo */}
         <div className="flex items-center gap-4 text-white font-bold">
           <img 
@@ -119,19 +119,39 @@ export default function HeroHeader() {
 
         {/* Navigation Menu - Hidden on mobile */}
         <div className="hidden md:flex items-center gap-12">
-          <a href="#" className="font-medium hover:opacity-75 transition-opacity duration-300" style={{ fontSize: '0.95rem' }}>
+          <a 
+            href="mailto:kaz@kazviskrealty.com?subject=About Kaz Visk Realty&body=Hi Kaz, I'd like to learn more about your services."
+            className="font-medium hover:opacity-75 transition-opacity duration-300 cursor-pointer" 
+            style={{ fontSize: '0.95rem' }}
+          >
             ABOUT
           </a>
-          <a href="#" className="font-medium hover:opacity-75 transition-opacity duration-300" style={{ fontSize: '0.95rem' }}>
+          <a 
+            href="mailto:kaz@kazviskrealty.com?subject=Looking to Buy in San Francisco&body=Hi Kaz, I'm interested in buying a property in San Francisco. Please contact me."
+            className="font-medium hover:opacity-75 transition-opacity duration-300 cursor-pointer" 
+            style={{ fontSize: '0.95rem' }}
+          >
             BUY
           </a>
-          <a href="#" className="font-medium hover:opacity-75 transition-opacity duration-300" style={{ fontSize: '0.95rem' }}>
+          <a 
+            href="mailto:kaz@kazviskrealty.com?subject=Looking to Sell in San Francisco&body=Hi Kaz, I'm interested in selling my property in San Francisco. Please contact me."
+            className="font-medium hover:opacity-75 transition-opacity duration-300 cursor-pointer" 
+            style={{ fontSize: '0.95rem' }}
+          >
             SELL
           </a>
-          <a href="#" className="font-medium hover:opacity-75 transition-opacity duration-300" style={{ fontSize: '0.95rem' }}>
+          <a 
+            href="mailto:kaz@kazviskrealty.com?subject=San Francisco Neighborhoods&body=Hi Kaz, I'd like to learn more about San Francisco neighborhoods and areas."
+            className="font-medium hover:opacity-75 transition-opacity duration-300 cursor-pointer" 
+            style={{ fontSize: '0.95rem' }}
+          >
             NEIGHBORHOODS
           </a>
-          <a href="#" className="font-medium hover:opacity-75 transition-opacity duration-300" style={{ fontSize: '0.95rem' }}>
+          <a 
+            href="mailto:kaz@kazviskrealty.com?subject=Contact Kaz Visk Realty&body=Hi Kaz, I'd like to get in touch about your real estate services."
+            className="font-medium hover:opacity-75 transition-opacity duration-300 cursor-pointer" 
+            style={{ fontSize: '0.95rem' }}
+          >
             CONTACT
           </a>
         </div>
@@ -189,18 +209,20 @@ export default function HeroHeader() {
             transition={{ duration: 1, delay: 0.9 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <button 
+            <a 
+              href="mailto:kaz@kazviskrealty.com?subject=Looking to Buy in San Francisco&body=Hi Kaz, I'm interested in buying a property in San Francisco. Please contact me to discuss my needs and how you can help me find the perfect home."
               className="px-8 py-4 bg-white/5 backdrop-blur-sm border-2 border-white text-white font-medium rounded-lg hover:bg-white/15 hover:backdrop-blur-xl hover:border-white/40 transition-all duration-300 shadow-sm hover:shadow-xl"
               aria-label="Find properties to buy"
             >
               Looking to Buy
-            </button>
-            <button 
+            </a>
+            <a 
+              href="mailto:kaz@kazviskrealty.com?subject=Looking to Sell in San Francisco&body=Hi Kaz, I'm interested in selling my property in San Francisco. Please contact me to discuss how you can help me get the best value for my home."
               className="px-8 py-4 bg-white/5 backdrop-blur-sm border-2 border-white text-white font-medium rounded-lg hover:bg-white/15 hover:backdrop-blur-xl hover:border-white/40 transition-all duration-300 shadow-sm hover:shadow-xl"
               aria-label="Sell your property"
             >
               Looking to Sell
-            </button>
+            </a>
           </motion.div>
         </div>
       </div>

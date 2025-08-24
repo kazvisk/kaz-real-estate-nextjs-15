@@ -94,7 +94,7 @@ export default function MeetKazSection() {
             >
               {/* Learn More Button */}
               <a
-                href="#"
+                href="mailto:kaz@kazviskrealty.com?subject=Learn More About Kaz Visk Realty&body=Hi Kaz, I'd like to learn more about your real estate services and how you can help me. Please contact me."
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-xl border border-white/20 text-white font-medium rounded-lg hover:bg-white/15 hover:border-white/30 transition-all duration-300 shadow-xl"
               >
                 Learn More
