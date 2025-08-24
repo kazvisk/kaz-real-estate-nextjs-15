@@ -105,8 +105,16 @@ export default function HeroHeader() {
       {/* Navigation Bar */}
       <nav className="relative z-30 flex items-center justify-between px-8 md:px-16 py-8 text-white">
         {/* Logo */}
-        <div className="text-white font-medium text-lg">
-          KAZ VISK REALTY
+        <div className="flex items-center gap-4 text-white font-bold">
+          <img 
+            src="/kvlogo.svg" 
+            alt="Kaz Visk Realty Logo" 
+            className="h-12 w-auto"
+          />
+          <div className="flex flex-col text-center">
+            <span className="text-xl leading-tight">Kaz Visk</span>
+            <span className="text-lg leading-tight">Realty</span>
+          </div>
         </div>
 
         {/* Navigation Menu - Hidden on mobile */}

@@ -155,8 +155,8 @@ export default function MeetKazSection() {
                   aria-label="Vanguard Properties"
                 >
                   <img 
-                    src="/favicon/favicon.ico" 
-                    alt="Website" 
+                    src="/favicon/vangaurd.ico" 
+                    alt="Vanguard Properties" 
                     className="w-5 h-5 group-hover:scale-110 transition-transform duration-300"
                   />
                 </a>
