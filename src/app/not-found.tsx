@@ -32,7 +32,7 @@ export default function NotFound() {
             <img 
               src="/kvlogo.svg" 
               alt="Kaz Visk Realty Logo" 
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
             <div className="flex flex-col text-center">
               <span className="text-2xl leading-tight">Kaz Visk</span>

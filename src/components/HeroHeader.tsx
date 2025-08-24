@@ -109,12 +109,8 @@ export default function HeroHeader() {
           <img 
             src="/kvlogo.svg" 
             alt="Kaz Visk Realty Logo" 
-            className="h-12 w-auto"
+            className="h-16 w-auto"
           />
-          <div className="flex flex-col text-center">
-            <span className="text-xl leading-tight">Kaz Visk</span>
-            <span className="text-lg leading-tight">Realty</span>
-          </div>
         </div>
 
         {/* Navigation Menu - Hidden on mobile */}
