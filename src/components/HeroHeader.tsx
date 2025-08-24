@@ -27,17 +27,24 @@ export default function HeroHeader() {
         fontFamily: 'Manrope, sans-serif'
       }}
     >
-      {/* Video Background */}
+      {/* Video Background with Poster Fallback */}
       <div className="absolute inset-0">
+        {/* Background poster image - always shows */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(/videos/poster.jpg)' }}
+        />
+        
+        {/* Video overlay - only shows when loaded */}
         <video 
-          className="w-full h-full object-cover"
-          poster="/videos/poster.webp"
+          className="absolute inset-0 w-full h-full object-cover"
           loop
           muted
           autoPlay
           playsInline
           preload="metadata"
           onLoadedData={handleVideoLoad}
+          style={{ opacity: videoLoaded ? 1 : 0 }}
         >
           <source 
             src="/videos/final.webm" 
