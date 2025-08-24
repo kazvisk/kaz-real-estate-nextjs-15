@@ -40,13 +40,20 @@ export default function HeroHeader() {
       {/* Video Background with Poster Fallback */}
       <div className="absolute inset-0 bg-slate-800">
         {/* Background poster image - always shows */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-10"
-          style={{ 
-            backgroundImage: 'url(/videos/poster.jpg)',
-            minHeight: '100vh'
-          }}
-        />
+        <div className="absolute inset-0 z-10">
+          <img 
+            src="/videos/poster.jpg"
+            alt="Kaz Visk Realty Background"
+            className="w-full h-full object-cover"
+            loading="eager"
+            decoding="async"
+            onError={(e) => {
+              console.log('Poster image failed to load:', e);
+              // Fallback to WebP if JPG fails
+              e.currentTarget.src = '/videos/poster.webp';
+            }}
+          />
+        </div>
         
         {/* Video overlay - only shows when loaded and NOT mobile */}
         {!isMobile && (
@@ -172,11 +179,11 @@ export default function HeroHeader() {
           {/* Email button */}
           <a 
             href="mailto:kaz@kazviskrealty.com"
-            className="w-14 h-14 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-all duration-300"
+            className="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/30 rounded-full flex items-center justify-center shadow-2xl hover:bg-white/20 hover:border-white/50 transition-all duration-300"
             aria-label="Email Kaz Visk Realty"
           >
             <svg 
-              className="w-6 h-6 text-gray-800" 
+              className="w-6 h-6 text-white drop-shadow-lg" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
@@ -193,11 +200,11 @@ export default function HeroHeader() {
           {/* Phone button */}
           <a 
             href="tel:+14155133387"
-            className="w-14 h-14 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-all duration-300"
+            className="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/30 rounded-full flex items-center justify-center shadow-2xl hover:bg-white/20 hover:border-white/50 transition-all duration-300"
             aria-label="Call Kaz Visk Realty at 415-513-3387"
           >
             <svg 
-              className="w-6 h-6 text-gray-800" 
+              className="w-6 h-6 text-white drop-shadow-lg" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
