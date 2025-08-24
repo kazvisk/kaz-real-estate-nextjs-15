@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { AnimatedText } from './AnimatedText'
-import { LoadingSpinner } from './LoadingSpinner'
 
 export default function HeroHeader() {
   const [mounted, setMounted] = useState(false)
@@ -49,12 +48,6 @@ export default function HeroHeader() {
             type="video/mp4" 
           />
         </video>
-        {/* Loading spinner while video loads */}
-        {!videoLoaded && (
-          <div className="absolute inset-0 bg-black flex items-center justify-center z-10">
-            <LoadingSpinner size="lg" className="text-white" />
-          </div>
-        )}
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/50" />
       </div>
@@ -93,9 +86,9 @@ export default function HeroHeader() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="text-white font-medium mb-8"
+            className="text-white font-medium mb-8 whitespace-nowrap"
             style={{
-              fontSize: 'clamp(3rem, 8vw, 7rem)',
+              fontSize: 'clamp(2.5rem, 6vw, 7rem)',
               lineHeight: '1.1',
               letterSpacing: '-0.02em'
             }}
