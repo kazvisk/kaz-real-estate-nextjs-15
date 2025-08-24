@@ -56,7 +56,7 @@ export default function MeetKazSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="text-lg text-gray-400 mb-8 font-medium"
+              className="text-lg text-gray-400 mb-8 font-medium whitespace-nowrap"
               style={{ fontFamily: 'Manrope, sans-serif' }}
             >
               San Francisco REALTOR® — CA DRE #02318574
