@@ -16,12 +16,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Kaz Visk Realty',
+    url: 'https://kazviskrealty.com',
     images: [
       {
         url: '/kazviskimg.jpg',
         width: 1200,
         height: 630,
-        alt: 'Kaz Visk - Luxury San Francisco Real Estate Agent'
+        alt: 'Kaz Visk - Luxury San Francisco Real Estate Agent',
+        type: 'image/jpeg'
       }
     ]
   },
@@ -29,6 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Kaz Visk | Luxury San Francisco Real Estate Agent',
     description: 'Your local partner in real estate — whether you\'re moving in or moving on.',
+    images: ['/kazviskimg.jpg']
   },
 }
 
