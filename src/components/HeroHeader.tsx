@@ -119,14 +119,20 @@ export default function HeroHeader() {
 
         {/* Navigation Menu - Hidden on mobile */}
         <div className="hidden md:flex items-center gap-12">
-          <a href="#" className="font-normal hover:opacity-75 transition-opacity duration-300" style={{ fontSize: '0.95rem' }}>
-            WHO ARE WE?
+          <a href="#" className="font-medium hover:opacity-75 transition-opacity duration-300" style={{ fontSize: '0.95rem' }}>
+            ABOUT
           </a>
-          <a href="#" className="font-normal hover:opacity-75 transition-opacity duration-300" style={{ fontSize: '0.95rem' }}>
-            OUR PORTFOLIO
+          <a href="#" className="font-medium hover:opacity-75 transition-opacity duration-300" style={{ fontSize: '0.95rem' }}>
+            BUY
           </a>
-          <a href="#" className="font-normal hover:opacity-75 transition-opacity duration-300" style={{ fontSize: '0.95rem' }}>
-            CONNECT WITH US
+          <a href="#" className="font-medium hover:opacity-75 transition-opacity duration-300" style={{ fontSize: '0.95rem' }}>
+            SELL
+          </a>
+          <a href="#" className="font-medium hover:opacity-75 transition-opacity duration-300" style={{ fontSize: '0.95rem' }}>
+            NEIGHBORHOODS
+          </a>
+          <a href="#" className="font-medium hover:opacity-75 transition-opacity duration-300" style={{ fontSize: '0.95rem' }}>
+            CONTACT
           </a>
         </div>
 
