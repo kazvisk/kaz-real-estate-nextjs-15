@@ -3,23 +3,23 @@ import './globals.css'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 
 export const metadata: Metadata = {
-  title: 'KAZVISK REALTY - Luxury Real Estate San Francisco',
+  title: 'KAZ VISK REALTY - Luxury Real Estate San Francisco',
   description: 'Your local partner in real estate — whether you\'re moving in or moving on. Expert guidance for buying, selling, and investing in San Francisco properties.',
   keywords: 'real estate, San Francisco, buy home, sell house, property investment, real estate agent, luxury homes',
-  authors: [{ name: 'Kazvisk Realty' }],
-  creator: 'Kazvisk Realty',
-  publisher: 'Kazvisk Realty',
+  authors: [{ name: 'Kaz Visk Realty' }],
+  creator: 'Kaz Visk Realty',
+  publisher: 'Kaz Visk Realty',
   robots: 'index, follow',
   openGraph: {
-    title: 'KAZVISK REALTY - Your San Francisco Real Estate Partner',
+    title: 'KAZ VISK REALTY - Your San Francisco Real Estate Partner',
     description: 'Expert real estate services in San Francisco. Helping you buy, sell, invest, and grow your property portfolio.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Kazvisk Realty',
+    siteName: 'Kaz Visk Realty',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KAZVISK REALTY - San Francisco Real Estate',
+    title: 'KAZ VISK REALTY - San Francisco Real Estate',
     description: 'Your local partner in real estate — whether you\'re moving in or moving on.',
   },
 }

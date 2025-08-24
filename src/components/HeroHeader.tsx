@@ -63,7 +63,7 @@ export default function HeroHeader() {
       <nav className="relative z-20 flex items-center justify-between px-8 md:px-16 py-8 text-white">
         {/* Logo */}
         <div className="text-white font-medium text-lg">
-          KAZVISK REALTY
+          KAZ VISK REALTY
         </div>
 
         {/* Navigation Menu - Hidden on mobile */}
