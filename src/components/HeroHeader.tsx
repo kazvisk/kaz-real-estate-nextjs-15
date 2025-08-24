@@ -7,11 +7,21 @@ import { AnimatedText } from './AnimatedText'
 export default function HeroHeader() {
   const [mounted, setMounted] = useState(false)
   const [videoLoaded, setVideoLoaded] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   
   const actionWords = ['buy.', 'sell.', 'invest.', 'grow.']
 
   useEffect(() => {
     setMounted(true)
+    // Check if user is on mobile device
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768 || /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    
+    return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
   const handleVideoLoad = () => {
@@ -28,33 +38,35 @@ export default function HeroHeader() {
       }}
     >
       {/* Video Background with Poster Fallback */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-slate-800">
         {/* Background poster image - always shows */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(/videos/poster.jpg)' }}
         />
         
-        {/* Video overlay - only shows when loaded */}
-        <video 
-          className="absolute inset-0 w-full h-full object-cover"
-          loop
-          muted
-          autoPlay
-          playsInline
-          preload="metadata"
-          onLoadedData={handleVideoLoad}
-          style={{ opacity: videoLoaded ? 1 : 0 }}
-        >
-          <source 
-            src="/videos/final.webm" 
-            type="video/webm" 
-          />
-          <source 
-            src="/videos/final.mp4" 
-            type="video/mp4" 
-          />
-        </video>
+        {/* Video overlay - only shows when loaded and NOT mobile */}
+        {!isMobile && (
+          <video 
+            className="absolute inset-0 w-full h-full object-cover"
+            loop
+            muted
+            autoPlay
+            playsInline
+            preload="metadata"
+            onLoadedData={handleVideoLoad}
+            style={{ opacity: videoLoaded ? 1 : 0 }}
+          >
+            <source 
+              src="/videos/final.webm" 
+              type="video/webm" 
+            />
+            <source 
+              src="/videos/final.mp4" 
+              type="video/mp4" 
+            />
+          </video>
+        )}
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/50" />
       </div>
