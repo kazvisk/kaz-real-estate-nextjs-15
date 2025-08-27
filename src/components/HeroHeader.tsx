@@ -195,7 +195,7 @@ export default function HeroHeader() {
               opacity: '0.95'
             }}
           >
-            Your local partner in real estate — whether you're moving in or moving on. <a href="#meet-kaz" className="text-white/90 hover:text-white underline transition-colors">Meet Kaz Viskanta</a>
+            Your local partner in real estate — whether you're moving in or moving on.
           </motion.p>
 
           {/* Call-to-Action Buttons */}

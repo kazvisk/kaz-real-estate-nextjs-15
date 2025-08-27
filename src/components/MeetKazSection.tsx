@@ -85,16 +85,6 @@ export default function MeetKazSection() {
               As your local partner, I bring market knowledge, negotiation skills, and a modern approach to real estate—so you feel confident every step of the way.
             </motion.p>
 
-            {/* Paragraph 3 - Natural mention of alternate name */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.25 }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="text-sm text-gray-400 mb-8 leading-relaxed italic"
-            >
-              Known professionally as Kaz Visk in many real estate circles, I've built my reputation on delivering exceptional results. Whether you search for Kaz Viskanta or Kaz Visk, you'll find the same commitment to excellence in San Francisco real estate.
-            </motion.p>
 
             {/* CTA Section */}
             <motion.div
