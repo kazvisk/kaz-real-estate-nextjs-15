@@ -6,6 +6,7 @@ import Image from 'next/image'
 export default function MeetKazSection() {
   return (
     <section 
+      id="meet-kaz"
       className="py-20 px-6 md:px-16" 
       style={{ backgroundColor: '#131925' }}
     >
@@ -22,7 +23,7 @@ export default function MeetKazSection() {
             <div className="relative aspect-square w-full max-w-md mx-auto lg:mx-0">
               <Image
                 src="/headshot.jpg"
-                alt="Kaz Visk - San Francisco Real Estate Agent"
+                alt="Kaz Viskanta - San Francisco Real Estate Agent"
                 fill
                 className="object-cover rounded-2xl shadow-xl"
                 priority
@@ -47,7 +48,7 @@ export default function MeetKazSection() {
               className="text-4xl md:text-5xl font-medium text-white mb-2"
               style={{ fontFamily: 'Manrope, sans-serif' }}
             >
-              Meet Kaz
+              Meet Kaz Viskanta
             </motion.h2>
 
             {/* Professional Credentials */}
@@ -70,7 +71,7 @@ export default function MeetKazSection() {
               viewport={{ once: true, amount: 0.3 }}
               className="text-lg text-gray-300 mb-6 leading-relaxed"
             >
-              I'm Kaz Visk, a San Francisco real estate agent passionate about helping people find their place in this city. Whether you're buying your first home, upgrading your space, or moving on to new opportunities, I guide you through the process with transparency, strategy, and care.
+              I'm Kaz Viskanta, a San Francisco real estate agent passionate about helping people find their place in this city. Whether you're buying your first home, upgrading your space, or moving on to new opportunities, I guide you through the process with transparency, strategy, and care.
             </motion.p>
 
             {/* Paragraph 2 */}
@@ -79,9 +80,20 @@ export default function MeetKazSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="text-lg text-gray-300 mb-8 leading-relaxed"
+              className="text-lg text-gray-300 mb-6 leading-relaxed"
             >
               As your local partner, I bring market knowledge, negotiation skills, and a modern approach to real estate—so you feel confident every step of the way.
+            </motion.p>
+
+            {/* Paragraph 3 - Natural mention of alternate name */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="text-sm text-gray-400 mb-8 leading-relaxed italic"
+            >
+              Known professionally as Kaz Visk in many real estate circles, I've built my reputation on delivering exceptional results. Whether you search for Kaz Viskanta or Kaz Visk, you'll find the same commitment to excellence in San Francisco real estate.
             </motion.p>
 
             {/* CTA Section */}

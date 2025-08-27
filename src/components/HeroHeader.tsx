@@ -61,7 +61,7 @@ export default function HeroHeader() {
         <div className="absolute inset-0 z-10">
           <img 
             src="/videos/poster.jpg"
-            alt="Kaz Visk Realty Background"
+            alt="Kaz Viskanta Realty Background"
             className="w-full h-full object-cover"
             loading="eager"
             decoding="async"
@@ -108,7 +108,7 @@ export default function HeroHeader() {
         <div className="flex items-center gap-4 text-white font-bold">
           <img 
             src="/kvlogo.svg" 
-            alt="Kaz Visk Realty Logo" 
+            alt="Kaz Viskanta Realty Logo" 
             className="h-16 w-auto"
           />
         </div>
@@ -195,7 +195,7 @@ export default function HeroHeader() {
               opacity: '0.95'
             }}
           >
-            Your local partner in real estate — whether you're moving in or moving on.
+            Your local partner in real estate — whether you're moving in or moving on. <a href="#meet-kaz" className="text-white/90 hover:text-white underline transition-colors">Meet Kaz Viskanta</a>
           </motion.p>
 
           {/* Call-to-Action Buttons */}
@@ -258,7 +258,7 @@ export default function HeroHeader() {
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)'
               }
             }}
-            aria-label="Email Kaz Visk Realty"
+            aria-label="Email Kaz Viskanta Realty"
           >
             <svg 
               className="w-6 h-6 drop-shadow-lg"
@@ -308,7 +308,7 @@ export default function HeroHeader() {
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)'
               }
             }}
-            aria-label="Call Kaz Visk Realty at 415-513-3387"
+            aria-label="Call Kaz Viskanta at 415-513-3387"
           >
             <svg 
               className="w-6 h-6 drop-shadow-lg"
