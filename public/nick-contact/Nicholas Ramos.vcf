@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//iPhone OS 26.0//EN
+N:Ramos;Nicholas;;;
+FN:Nicholas Ramos
+ORG:Coldwell Banker;
+EMAIL;type=INTERNET;type=HOME;type=pref:nicholas.ramos@cbrealty.com
+TEL;type=CELL;type=VOICE;type=pref:(512) 375-1378
+item1.URL;type=pref:nicholasramosrealty.com
+item1.X-ABLabel:_$!<HomePage>!$_
+END:VCARD
