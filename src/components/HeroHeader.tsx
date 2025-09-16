@@ -116,7 +116,7 @@ export default function HeroHeader() {
         {/* Navigation Menu - Hidden on mobile */}
         <div className="hidden md:flex items-center gap-12">
           <a 
-            href="mailto:kaz@kazviskrealty.com?subject=About Kaz Visk Realty&body=Hi Kaz, I'd like to learn more about your services."
+            href="/about"
             className="font-medium hover:opacity-75 transition-opacity duration-300 cursor-pointer" 
             style={{ fontSize: '0.95rem' }}
           >
