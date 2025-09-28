@@ -1,0 +1,412 @@
+'use client'
+
+import { motion } from 'framer-motion'
+
+export default function CMA() {
+  return (
+    <main className="min-h-screen w-full overflow-x-hidden">
+      {/* Navigation Bar */}
+      <nav className="relative z-40 flex items-center justify-between px-8 md:px-16 py-8 text-white bg-[#131925]">
+        {/* Logo */}
+        <div className="flex items-center gap-4 text-white font-bold">
+          <a href="/">
+            <img
+              src="/kvlogo.svg"
+              alt="Kaz Viskanta Realty Logo"
+              className="h-16 w-auto"
+            />
+          </a>
+        </div>
+
+        {/* Navigation Menu - Hidden on mobile */}
+        <div className="hidden md:flex items-center gap-12">
+          <a
+            href="/"
+            className="font-medium hover:opacity-75 transition-opacity duration-300 cursor-pointer"
+            style={{ fontSize: '0.95rem' }}
+          >
+            HOME
+          </a>
+          <a
+            href="/about"
+            className="font-medium hover:opacity-75 transition-opacity duration-300 cursor-pointer"
+            style={{ fontSize: '0.95rem' }}
+          >
+            ABOUT
+          </a>
+          <a
+            href="mailto:kaz@kazviskrealty.com?subject=Looking to Buy in San Francisco&body=Hi Kaz, I'm interested in buying a property in San Francisco. Please contact me."
+            className="font-medium hover:opacity-75 transition-opacity duration-300 cursor-pointer"
+            style={{ fontSize: '0.95rem' }}
+          >
+            BUY
+          </a>
+          <a
+            href="mailto:kaz@kazviskrealty.com?subject=Looking to Sell in San Francisco&body=Hi Kaz, I'm interested in selling my property in San Francisco. Please contact me."
+            className="font-medium hover:opacity-75 transition-opacity duration-300 cursor-pointer"
+            style={{ fontSize: '0.95rem' }}
+          >
+            SELL
+          </a>
+          <a
+            href="mailto:kaz@kazviskrealty.com?subject=San Francisco Neighborhoods&body=Hi Kaz, I'd like to learn more about San Francisco neighborhoods and areas."
+            className="font-medium hover:opacity-75 transition-opacity duration-300 cursor-pointer"
+            style={{ fontSize: '0.95rem' }}
+          >
+            NEIGHBORHOODS
+          </a>
+          <a
+            href="/cma"
+            className="font-medium opacity-100 cursor-pointer border-b border-white pb-1"
+            style={{ fontSize: '0.95rem' }}
+          >
+            CMA
+          </a>
+          <a
+            href="mailto:kaz@kazviskrealty.com?subject=Contact Kaz Viskanta&body=Hi Kaz, I'd like to get in touch about your real estate services."
+            className="font-medium hover:opacity-75 transition-opacity duration-300 cursor-pointer"
+            style={{ fontSize: '0.95rem' }}
+          >
+            CONTACT
+          </a>
+        </div>
+
+        {/* Menu Toggle */}
+        <button className="text-white font-normal hover:opacity-75 transition-opacity duration-300" style={{ fontSize: '0.95rem' }}>
+          MENU ☰
+        </button>
+      </nav>
+
+      {/* Hero Section */}
+      <section
+        className="py-20 px-6 md:px-16"
+        style={{ backgroundColor: '#131925' }}
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Content Column */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="flex flex-col justify-center"
+            >
+              {/* Page Title */}
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-5xl md:text-6xl font-medium text-white mb-4"
+                style={{ fontFamily: 'Manrope, sans-serif' }}
+              >
+                Free Home Valuation
+              </motion.h1>
+
+              {/* Subtitle */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-lg text-gray-400 mb-8 font-medium"
+                style={{ fontFamily: 'Manrope, sans-serif' }}
+              >
+                Get an accurate Comparative Market Analysis (CMA) for your San Francisco property
+              </motion.p>
+
+              {/* Description */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-lg text-gray-300 mb-8 leading-relaxed"
+              >
+                Curious about your home's current market value? I'll provide you with a comprehensive analysis of recent comparable sales, current market trends, and an accurate estimate of your property's worth in today's San Francisco market.
+              </motion.p>
+
+              {/* CTA Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex flex-col sm:flex-row gap-6"
+              >
+                <a
+                  href="https://tally.so/r/w8OYPA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-medium rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl"
+                >
+                  Request Your Free CMA
+                  <svg
+                    className="ml-2 w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </a>
+              </motion.div>
+            </motion.div>
+
+            {/* Visual Column */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative aspect-[4/3] w-full max-w-lg mx-auto lg:mx-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 shadow-xl">
+                <div className="text-white h-full flex flex-col justify-center">
+                  <div className="text-4xl font-bold mb-4">CMA</div>
+                  <div className="text-lg mb-6">Comparative Market Analysis</div>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      <span>Recent Comparable Sales</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      <span>Current Market Trends</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      <span>Accurate Property Valuation</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      <span>Professional Analysis</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* What's Included Section */}
+      <section className="py-20 px-6 md:px-16" style={{ backgroundColor: '#f8fafc' }}>
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-medium text-gray-800 mb-6" style={{ fontFamily: 'Manrope, sans-serif' }}>
+              What's Included in Your CMA
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              A comprehensive analysis tailored specifically to your San Francisco property.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Comparable Sales */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="bg-white rounded-2xl p-8 shadow-lg"
+            >
+              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Recent Comparable Sales</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Analysis of similar properties that have sold in your neighborhood within the last 6 months, including sale prices and key features.
+              </p>
+            </motion.div>
+
+            {/* Market Trends */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="bg-white rounded-2xl p-8 shadow-lg"
+            >
+              <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Current Market Trends</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Local market conditions, price trends, inventory levels, and days on market specific to your San Francisco neighborhood.
+              </p>
+            </motion.div>
+
+            {/* Property Assessment */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="bg-white rounded-2xl p-8 shadow-lg"
+            >
+              <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-2m-2 0H7m5 0v-9a3 3 0 00-6 0v9m6 0a3 3 0 006 0v-9a3 3 0 00-6 0v9" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Property Assessment</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Detailed evaluation of your property's unique features, condition, and improvements that impact market value.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 px-6 md:px-16" style={{ backgroundColor: '#131925' }}>
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-medium text-white mb-6" style={{ fontFamily: 'Manrope, sans-serif' }}>
+              How It Works
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Getting your free CMA is simple and takes just a few minutes.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            {/* Step 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="text-center"
+            >
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <span className="text-2xl font-bold text-white">1</span>
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-4">Submit Your Request</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Fill out the simple form with your property details and contact information.
+              </p>
+            </motion.div>
+
+            {/* Step 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="text-center"
+            >
+              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <span className="text-2xl font-bold text-white">2</span>
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-4">Market Research</h3>
+              <p className="text-gray-300 leading-relaxed">
+                I'll analyze recent sales, current listings, and market data specific to your property and area.
+              </p>
+            </motion.div>
+
+            {/* Step 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="text-center"
+            >
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <span className="text-2xl font-bold text-white">3</span>
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-4">Receive Your CMA</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Get your comprehensive market analysis within 24-48 hours, delivered to your email.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section
+        className="py-20 px-6 md:px-16"
+        style={{ backgroundColor: '#f8fafc' }}
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-4xl md:text-5xl font-medium text-gray-800 mb-8"
+            style={{ fontFamily: 'Manrope, sans-serif' }}
+          >
+            Ready to Learn Your Home's Value?
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-xl text-gray-700 mb-12 leading-relaxed"
+          >
+            Get your free, no-obligation Comparative Market Analysis today.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+          >
+            <a
+              href="https://tally.so/r/w8OYPA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-4 bg-[#131925] text-white font-medium rounded-lg hover:bg-gray-800 transition-all duration-300 shadow-xl"
+            >
+              Request Your Free CMA
+              <svg
+                className="ml-2 w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="mailto:kaz@kazviskrealty.com?subject=CMA Request&body=Hi Kaz, I'd like to request a Comparative Market Analysis for my property."
+              className="inline-flex items-center px-8 py-4 border-2 border-[#131925] text-[#131925] font-medium rounded-lg hover:bg-[#131925] hover:text-white transition-all duration-300"
+            >
+              Questions? Email Me
+            </a>
+          </motion.div>
+        </div>
+      </section>
+    </main>
+  )
+}
