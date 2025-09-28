@@ -270,10 +270,112 @@ export default function CMA() {
         </div>
       </section>
 
+      {/* Your Real Estate Agents Section */}
+      <section className="py-20 px-6 md:px-16" style={{ backgroundColor: '#f8fafc' }}>
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-medium text-gray-800 mb-6" style={{ fontFamily: 'Manrope, sans-serif' }}>
+              Your Real Estate Agents
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Meet the experienced professionals who will prepare your comprehensive market analysis.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            {/* Kaz Viskanta */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="bg-white rounded-2xl p-8 shadow-lg text-center"
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6">
+                <img
+                  src="/headshot.jpg"
+                  alt="Kaz Viskanta - San Francisco Real Estate Agent"
+                  className="w-full h-full object-cover rounded-full shadow-lg"
+                />
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-2">Kaz Viskanta</h3>
+              <p className="text-blue-600 font-medium mb-4">CA DRE #02318574</p>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                San Francisco real estate specialist with extensive experience in luxury properties,
+                market analysis, and helping clients navigate complex transactions.
+              </p>
+              <div className="space-y-2">
+                <a
+                  href="mailto:kaz@kazviskrealty.com"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
+                  kaz@kazviskrealty.com
+                </a>
+                <div className="flex items-center justify-center text-gray-600">
+                  <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                  </svg>
+                  (415) 513-3387
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Nicholas Ramos */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="bg-white rounded-2xl p-8 shadow-lg text-center"
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6">
+                <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-full shadow-lg flex items-center justify-center">
+                  <span className="text-3xl font-bold text-white">NR</span>
+                </div>
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-2">Nicholas Ramos</h3>
+              <p className="text-green-600 font-medium mb-4">Coldwell Banker Realty</p>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Experienced real estate professional specializing in residential properties
+                and providing comprehensive market analysis for informed decision-making.
+              </p>
+              <div className="space-y-2">
+                <a
+                  href="mailto:nicholas.ramos@cbrealty.com"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
+                  nicholas.ramos@cbrealty.com
+                </a>
+                <div className="flex items-center justify-center text-gray-600">
+                  <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                  </svg>
+                  (512) 375-1378
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section
         className="py-20 px-6 md:px-16"
-        style={{ backgroundColor: '#f8fafc' }}
+        style={{ backgroundColor: '#131925' }}
       >
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
@@ -281,7 +383,7 @@ export default function CMA() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="text-4xl md:text-5xl font-medium text-gray-800 mb-8"
+            className="text-4xl md:text-5xl font-medium text-white mb-8"
             style={{ fontFamily: 'Manrope, sans-serif' }}
           >
             Ready to Learn Your Home's Value?
@@ -292,7 +394,7 @@ export default function CMA() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="text-xl text-gray-700 mb-12 leading-relaxed"
+            className="text-xl text-gray-300 mb-12 leading-relaxed"
           >
             Get your free, no-obligation Comparative Market Analysis today.
           </motion.p>
@@ -308,7 +410,7 @@ export default function CMA() {
               href="https://tally.so/r/w8OYPA"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-[#131925] text-white font-medium rounded-lg hover:bg-gray-800 transition-all duration-300 shadow-xl"
+              className="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-medium rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl"
             >
               Request Your Free CMA
               <svg
@@ -328,7 +430,7 @@ export default function CMA() {
 
             <a
               href="mailto:kaz@kazviskrealty.com?subject=CMA Request&body=Hi Kaz, I'd like to request a Comparative Market Analysis for my property."
-              className="inline-flex items-center px-8 py-4 border-2 border-[#131925] text-[#131925] font-medium rounded-lg hover:bg-[#131925] hover:text-white transition-all duration-300"
+              className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-xl border border-white/20 text-white font-medium rounded-lg hover:bg-white/15 hover:border-white/30 transition-all duration-300 shadow-xl"
             >
               Questions? Email Me
             </a>
