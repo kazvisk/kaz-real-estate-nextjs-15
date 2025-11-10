@@ -16,7 +16,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Map, Source, Layer, NavigationControl } from 'react-map-gl/maplibre';
 import type { MapRef, MapLayerMouseEvent } from 'react-map-gl/maplibre';
-import type { FillLayer, LineLayer } from 'maplibre-gl';
 import { SfNeighborhoodFeature } from './types';
 import {
   NEIGHBORHOOD_DISTRICT,
@@ -147,18 +146,18 @@ export default function MapboxNeighborhoodMap({
   };
 
   // Layer styles with district-based coloring
-  const fillLayer: FillLayer = {
+  const fillLayer = {
     id: 'neighborhoods-fill',
-    type: 'fill',
+    type: 'fill' as const,
     paint: {
       'fill-color': buildFillColorExpression(),
       'fill-opacity': 1,
     },
   };
 
-  const lineLayer: LineLayer = {
+  const lineLayer = {
     id: 'neighborhoods-line',
-    type: 'line',
+    type: 'line' as const,
     paint: {
       'line-color': '#ffffff',
       'line-width': [
@@ -204,8 +203,8 @@ export default function MapboxNeighborhoodMap({
 
         {/* Neighborhood boundaries */}
         <Source id="neighborhoods" type="geojson" data={geoJsonData}>
-          <Layer {...fillLayer} />
-          <Layer {...lineLayer} />
+          <Layer {...(fillLayer as any)} />
+          <Layer {...(lineLayer as any)} />
         </Source>
       </Map>
 
