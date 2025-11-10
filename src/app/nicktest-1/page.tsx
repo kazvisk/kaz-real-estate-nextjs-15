@@ -41,9 +41,9 @@ export default function NickTest1Page() {
     name: string,
     feature: SfNeighborhoodFeature
   ) => {
-    // Redirect Outer Richmond to external URL
+    // Open Outer Richmond link in new tab
     if (name === 'Outer Richmond') {
-      window.location.href = 'https://lvslrealestate.com/san-francisco-CA/sea-cliff';
+      window.open('https://lvslrealestate.com/san-francisco-CA/sea-cliff', '_blank', 'noopener,noreferrer');
       return;
     }
     setSelectedName(name);
