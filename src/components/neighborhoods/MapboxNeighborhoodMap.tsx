@@ -18,6 +18,13 @@ import { Map, Source, Layer, NavigationControl } from 'react-map-gl/maplibre';
 import type { MapRef, MapLayerMouseEvent } from 'react-map-gl/maplibre';
 import type { FillLayer, LineLayer } from 'maplibre-gl';
 import { SfNeighborhoodFeature } from './types';
+import {
+  NEIGHBORHOOD_DISTRICT,
+  DISTRICT_COLORS,
+  DISTRICT_COLORS_HOVER,
+  DISTRICT_COLORS_SELECTED,
+  getDistrict
+} from './districtMapping';
 
 interface MapboxNeighborhoodMapProps {
   /** GeoJSON data for SF neighborhoods */
@@ -106,19 +113,45 @@ export default function MapboxNeighborhoodMap({
     }
   };
 
-  // Layer styles
+  // Build district color expression for MapLibre
+  // Creates a color lookup based on neighborhood name -> district -> color
+  const buildFillColorExpression = (): any => {
+    const expression: any[] = ['case'];
+
+    // For each neighborhood, check if it's selected or hovered, then assign appropriate district color
+    Object.entries(NEIGHBORHOOD_DISTRICT).forEach(([neighborhood, district]) => {
+      const baseColor = DISTRICT_COLORS[district] || 'rgba(100, 116, 139, 0.3)';
+      const hoverColor = DISTRICT_COLORS_HOVER[district] || 'rgba(100, 116, 139, 0.5)';
+      const selectedColor = DISTRICT_COLORS_SELECTED[district] || 'rgba(100, 116, 139, 0.7)';
+
+      // Check if this neighborhood is selected
+      if (selectedName && neighborhood === selectedName) {
+        expression.push(['==', ['get', 'name'], neighborhood]);
+        expression.push(selectedColor);
+      }
+      // Check if this neighborhood is hovered
+      else if (hoveredName && neighborhood === hoveredName) {
+        expression.push(['==', ['get', 'name'], neighborhood]);
+        expression.push(hoverColor);
+      }
+      // Default state
+      else {
+        expression.push(['==', ['get', 'name'], neighborhood]);
+        expression.push(baseColor);
+      }
+    });
+
+    // Fallback color for unmapped neighborhoods
+    expression.push('rgba(100, 116, 139, 0.3)');
+    return expression;
+  };
+
+  // Layer styles with district-based coloring
   const fillLayer: FillLayer = {
     id: 'neighborhoods-fill',
     type: 'fill',
     paint: {
-      'fill-color': [
-        'case',
-        ['==', ['get', 'name'], selectedName || ''],
-        'rgba(153, 27, 27, 0.6)',
-        ['==', ['get', 'name'], hoveredName || ''],
-        'rgba(185, 28, 28, 0.5)',
-        'rgba(100, 116, 139, 0.3)'
-      ],
+      'fill-color': buildFillColorExpression(),
       'fill-opacity': 1,
     },
   };
