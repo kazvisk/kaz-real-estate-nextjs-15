@@ -69,15 +69,18 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preload" as="image" href="/videos/poster.jpg" />
         <link rel="preload" as="video" href="/videos/final.webm" type="video/webm" />
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" 
-          rel="stylesheet" 
+        <link
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap"
+          rel="stylesheet"
         />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
+
+        {/* MapLibre GL CSS */}
+        <link href="https://unpkg.com/maplibre-gl@4.0.0/dist/maplibre-gl.css" rel="stylesheet" />
         
         {/* Structured Data for SEO */}
         <script

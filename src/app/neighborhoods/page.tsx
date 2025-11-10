@@ -8,7 +8,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import SfNeighborhoodMap from '@/components/neighborhoods/SfNeighborhoodMap';
+import MapboxNeighborhoodMap from '@/components/neighborhoods/MapboxNeighborhoodMap';
 import NeighborhoodDetailPanel from '@/components/neighborhoods/NeighborhoodDetailPanel';
 import { SfNeighborhoodFeature } from '@/components/neighborhoods/types';
 import { getNeighborhoodStats } from '@/components/neighborhoods/neighborhoodStats';
@@ -98,7 +98,7 @@ export default function NeighborhoodsPage() {
           <div className="flex flex-col md:flex-row min-h-[70vh]">
             {/* Map Section */}
             <div className="md:w-3/5 w-full">
-              <SfNeighborhoodMap
+              <MapboxNeighborhoodMap
                 geoJsonData={geoJsonData}
                 onSelect={handleNeighborhoodSelect}
                 selectedName={selectedName}
