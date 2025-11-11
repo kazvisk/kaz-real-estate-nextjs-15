@@ -28,6 +28,8 @@ export const NEIGHBORHOOD_DISTRICT: Record<string, string> = {
   "Inner Parkside": "San Francisco Realtor 2",
   "Outer Parkside": "San Francisco Realtor 2",
   "Golden Gate Heights": "San Francisco Realtor 2",
+  "Golden Gate Park": "San Francisco Realtor 2",
+  "Stonestown": "San Francisco Realtor 2",
 
   // San Francisco Realtor 3
   "Lake Shore": "San Francisco Realtor 3",
@@ -37,8 +39,11 @@ export const NEIGHBORHOOD_DISTRICT: Record<string, string> = {
   "Merced Heights": "San Francisco Realtor 3",
   "Ingleside": "San Francisco Realtor 3",
   "Ingleside Heights": "San Francisco Realtor 3",
+  "Ingleside Terraces": "San Francisco Realtor 3",
   "Oceanview": "San Francisco Realtor 3",
   "Pine Lake Park": "San Francisco Realtor 3",
+  "Cayuga": "San Francisco Realtor 3",
+  "Parkmerced": "San Francisco Realtor 3",
 
   // San Francisco Realtor 4
   "St. Francis Wood": "San Francisco Realtor 4",
@@ -59,6 +64,8 @@ export const NEIGHBORHOOD_DISTRICT: Record<string, string> = {
   "Westwood Highlands": "San Francisco Realtor 4",
   "Westwood Park": "San Francisco Realtor 4",
   "Forest Hill Extension": "San Francisco Realtor 4",
+  "Laguna Honda": "San Francisco Realtor 4",
+  "St. Marys Park": "San Francisco Realtor 4",
 
   // San Francisco Realtor 5
   "Noe Valley": "San Francisco Realtor 5",
@@ -71,12 +78,16 @@ export const NEIGHBORHOOD_DISTRICT: Record<string, string> = {
   "Clarendon Heights": "San Francisco Realtor 5",
   "Ashbury Heights": "San Francisco Realtor 5",
   "Buena Vista Park": "San Francisco Realtor 5",
+  "Buena Vista": "San Francisco Realtor 5",
   "Haight Ashbury": "San Francisco Realtor 5",
   "Duboce Triangle": "San Francisco Realtor 5",
   "Twin Peaks": "San Francisco Realtor 5",
   "Mission Dolores": "San Francisco Realtor 5",
   "Parnassus Heights": "San Francisco Realtor 5",
   "Dolores Heights": "San Francisco Realtor 5",
+  "Fairmount": "San Francisco Realtor 5",
+  "Lower Haight": "San Francisco Realtor 5",
+  "Upper Market": "San Francisco Realtor 5",
 
   // San Francisco Realtor 6
   "Hayes Valley": "San Francisco Realtor 6",
@@ -86,6 +97,10 @@ export const NEIGHBORHOOD_DISTRICT: Record<string, string> = {
   "Western Addition": "San Francisco Realtor 6",
   "Anza Vista": "San Francisco Realtor 6",
   "Lower Pacific Heights": "San Francisco Realtor 6",
+  "Cathedral Hill": "San Francisco Realtor 6",
+  "Japantown": "San Francisco Realtor 6",
+  "Mint Hill": "San Francisco Realtor 6",
+  "Panhandle": "San Francisco Realtor 6",
 
   // San Francisco Realtor 7
   "Pacific Heights": "San Francisco Realtor 7",
@@ -93,20 +108,31 @@ export const NEIGHBORHOOD_DISTRICT: Record<string, string> = {
   "Cow Hollow": "San Francisco Realtor 7",
   "Marina": "San Francisco Realtor 7",
   "Marina District": "San Francisco Realtor 7",
+  "Aquatic Park / Ft. Mason": "San Francisco Realtor 7",
+  "Presidio National Park": "San Francisco Realtor 7",
+  "Presidio Terrace": "San Francisco Realtor 7",
+  "Union Street": "San Francisco Realtor 7",
 
   // San Francisco Realtor 8
   "Russian Hill": "San Francisco Realtor 8",
   "Nob Hill": "San Francisco Realtor 8",
+  "Lower Nob Hill": "San Francisco Realtor 8",
   "Telegraph Hill": "San Francisco Realtor 8",
   "North Beach": "San Francisco Realtor 8",
   "Financial District": "San Francisco Realtor 8",
   "Financial District/Barbary Coast": "San Francisco Realtor 8",
   "Barbary Coast": "San Francisco Realtor 8",
   "North Waterfront": "San Francisco Realtor 8",
+  "Northern Waterfront": "San Francisco Realtor 8",
   "Downtown": "San Francisco Realtor 8",
+  "Downtown / Union Square": "San Francisco Realtor 8",
   "Van Ness/Civic Center": "San Francisco Realtor 8",
   "Civic Center": "San Francisco Realtor 8",
   "Tenderloin": "San Francisco Realtor 8",
+  "Apparel City": "San Francisco Realtor 8",
+  "Chinatown": "San Francisco Realtor 8",
+  "Fishermans Wharf": "San Francisco Realtor 8",
+  "Polk Gulch": "San Francisco Realtor 8",
 
   // San Francisco Realtor 9
   "South of Market": "San Francisco Realtor 9",
@@ -119,7 +145,16 @@ export const NEIGHBORHOOD_DISTRICT: Record<string, string> = {
   "Bernal Heights": "San Francisco Realtor 9",
   "Inner Mission": "San Francisco Realtor 9",
   "Mission District": "San Francisco Realtor 9",
+  "Mission": "San Francisco Realtor 9",
   "Yerba Buena": "San Francisco Realtor 9",
+  "Holly Park": "San Francisco Realtor 9",
+  "India Basin": "San Francisco Realtor 9",
+  "Peralta Heights": "San Francisco Realtor 9",
+  "Produce Market": "San Francisco Realtor 9",
+  "Rincon Hill": "San Francisco Realtor 9",
+  "Showplace Square": "San Francisco Realtor 9",
+  "Treasure Island": "San Francisco Realtor 9",
+  "Yerba Buena Island": "San Francisco Realtor 9",
 
   // San Francisco Realtor 10
   "Bayview": "San Francisco Realtor 10",
@@ -133,7 +168,12 @@ export const NEIGHBORHOOD_DISTRICT: Record<string, string> = {
   "Outer Mission": "San Francisco Realtor 10",
   "Hunters Point": "San Francisco Realtor 10",
   "Candlestick Point": "San Francisco Realtor 10",
+  "Candlestick Point SRA": "San Francisco Realtor 10",
   "Little Hollywood": "San Francisco Realtor 10",
+  "Bret Harte": "San Francisco Realtor 10",
+  "McLaren Park": "San Francisco Realtor 10",
+  "Sunnydale": "San Francisco Realtor 10",
+  "University Mound": "San Francisco Realtor 10",
 };
 
 /**
