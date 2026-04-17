@@ -115,14 +115,21 @@ export default function HeroHeader() {
 
         {/* Navigation Menu - Hidden on mobile */}
         <div className="hidden md:flex items-center gap-12">
-          <a 
+          <a
             href="/about"
-            className="font-medium hover:opacity-75 transition-opacity duration-300 cursor-pointer" 
+            className="font-medium hover:opacity-75 transition-opacity duration-300 cursor-pointer"
             style={{ fontSize: '0.95rem' }}
           >
             ABOUT
           </a>
-          <a 
+          <a
+            href="/search"
+            className="font-medium hover:opacity-75 transition-opacity duration-300 cursor-pointer"
+            style={{ fontSize: '0.95rem' }}
+          >
+            SEARCH
+          </a>
+          <a
             href="mailto:kaz@kazviskrealty.com?subject=Looking to Buy in San Francisco&body=Hi Kaz, I'm interested in buying a property in San Francisco. Please contact me."
             className="font-medium hover:opacity-75 transition-opacity duration-300 cursor-pointer" 
             style={{ fontSize: '0.95rem' }}
