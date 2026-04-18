@@ -16,6 +16,9 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Map, Source, Layer, NavigationControl } from 'react-map-gl/maplibre';
 import type { MapRef, MapLayerMouseEvent } from 'react-map-gl/maplibre';
+import type { Feature, FeatureCollection, MultiPolygon } from 'geojson';
+
+type DistrictFeatureProps = { district: string; neighborhoods: string[] };
 import { SfNeighborhoodFeature } from './types';
 import {
   NEIGHBORHOOD_DISTRICT,
@@ -58,10 +61,10 @@ export default function MapboxNeighborhoodMap({
   }, [geoJsonData]);
 
   // Aggregate neighborhoods into districts
-  const districtGeoJson = useMemo(() => {
+  const districtGeoJson = useMemo((): FeatureCollection | null => {
     if (!geoJsonData?.features) return null;
 
-    const districtFeatures: any = {};
+    const districtFeatures: Record<string, Feature<MultiPolygon, DistrictFeatureProps>> = {};
 
     geoJsonData.features.forEach((feature: any) => {
       const neighborhoodName = feature.properties?.name;
@@ -72,24 +75,25 @@ export default function MapboxNeighborhoodMap({
           districtFeatures[district] = {
             type: 'Feature',
             properties: { district, neighborhoods: [] },
-            geometry: { type: 'MultiPolygon', coordinates: [] }
+            geometry: { type: 'MultiPolygon', coordinates: [] },
           };
         }
 
-        districtFeatures[district].properties.neighborhoods.push(neighborhoodName);
+        const df = districtFeatures[district];
+        df.properties.neighborhoods.push(neighborhoodName);
 
         // Add this neighborhood's geometry to the district
         if (feature.geometry.type === 'Polygon') {
-          districtFeatures[district].geometry.coordinates.push(feature.geometry.coordinates);
+          df.geometry.coordinates.push(feature.geometry.coordinates);
         } else if (feature.geometry.type === 'MultiPolygon') {
-          districtFeatures[district].geometry.coordinates.push(...feature.geometry.coordinates);
+          df.geometry.coordinates.push(...feature.geometry.coordinates);
         }
       }
     });
 
     return {
       type: 'FeatureCollection',
-      features: Object.values(districtFeatures)
+      features: Object.values(districtFeatures),
     };
   }, [geoJsonData]);
 
