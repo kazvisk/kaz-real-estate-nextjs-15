@@ -100,7 +100,7 @@ export default function SearchPage() {
         }}
       >
         <iframe
-          src="https://kazimierasviskanta.realscout.com/homesearch/map"
+          src="https://kaz.realscout.com/homesearch/map"
           width="100%"
           height="100%"
           style={{ border: 'none', minHeight: '88vh', display: 'block' }}
