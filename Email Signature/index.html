@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Signature — Kaz Viskanta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:   #131925;
+      --cream: #edebe5;
+      --muted: #9a9288;
+      --pale:  #bfb9b0;
+    }
+
+    body {
+      background-color: var(--cream);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.042'/%3E%3C/svg%3E");
+      font-family: 'Manrope', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px;
+    }
+
+    .eyebrow {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .sub {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      opacity: 0.35;
+      margin-bottom: 52px;
+      text-align: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 3px;
+      padding: 52px 60px;
+      margin-bottom: 36px;
+      box-shadow:
+        0 0 0 1px rgba(19,25,37,0.05),
+        0 8px 48px rgba(19,25,37,0.07),
+        0 2px 8px  rgba(19,25,37,0.04);
+    }
+
+    .copy-btn {
+      background: var(--ink);
+      color: #fff;
+      border: none;
+      padding: 14px 40px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 2px;
+      display: block;
+      margin: 0 auto 20px;
+      transition: opacity 0.15s, transform 0.1s;
+    }
+    .copy-btn:hover  { opacity: 0.75; }
+    .copy-btn:active { transform: scale(0.98); }
+    .copy-btn.done   { background: #5c6370; }
+
+    .note {
+      font-size: 10.5px;
+      color: var(--pale);
+      line-height: 1.9;
+      text-align: center;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background: var(--ink);
+      color: #fff;
+      font-family: 'Manrope', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      border-radius: 100px;
+      opacity: 0;
+      transition: opacity 0.22s, transform 0.22s;
+      pointer-events: none;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  </style>
+</head>
+<body>
+
+  <p class="eyebrow">Email Signature</p>
+  <p class="sub">Kaz Viskanta &nbsp;·&nbsp; Kazviskrealty</p>
+
+  <div class="card">
+    <div id="sig">
+      <!--
+        SIGNATURE — paste directly into Gmail → Settings → Signature
+        Swap ./image path to a hosted URL when the site goes live
+      -->
+      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; font-family:'Manrope',Arial,sans-serif; background:#ffffff;">
+        <tr>
+
+          <!-- ── KV Logo ── -->
+          <td style="padding-right:28px; border-right:1px solid #d0cbc5; vertical-align:middle;">
+            <img
+              src="https://kazviskrealty.com/Email/email-logo.png"
+              alt="KV"
+              height="60"
+              style="display:block; height:60px; width:auto;"
+            />
+          </td>
+
+          <!-- ── Right content ── -->
+          <td style="padding-left:28px; vertical-align:top;">
+
+            <!-- Name -->
+            <div style="font-family:'Manrope',Arial,sans-serif; font-size:18px; font-weight:300; color:#131925; letter-spacing:-0.045em; line-height:1; white-space:nowrap; margin-bottom:5px;">
+              Kaz Viskanta
+            </div>
+
+            <!-- Pill -->
+            <div style="margin-bottom:10px;">
+              <span style="font-family:'Manrope',Arial,sans-serif; font-size:7px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#131925; border:1px solid #131925; border-radius:20px; padding:3px 10px; display:inline-block; white-space:nowrap;">
+                San Francisco REALTOR®
+              </span>
+            </div>
+
+            <!-- Contact — P / E / W -->
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td style="font-family:'Manrope',Arial,sans-serif; font-size:8px; font-weight:700; color:#b8afa5; letter-spacing:0.11em; text-transform:uppercase; padding-right:10px; padding-bottom:3px; vertical-align:middle; white-space:nowrap;">P</td>
+                <td style="font-family:'Manrope',Arial,sans-serif; font-size:11px; font-weight:500; color:#131925; padding-bottom:3px; white-space:nowrap;">
+                  <a href="tel:4155133387" style="color:#131925; text-decoration:none;">(415) 513-3387</a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-family:'Manrope',Arial,sans-serif; font-size:8px; font-weight:700; color:#b8afa5; letter-spacing:0.11em; text-transform:uppercase; padding-right:10px; padding-bottom:3px; vertical-align:middle; white-space:nowrap;">E</td>
+                <td style="font-family:'Manrope',Arial,sans-serif; font-size:11px; font-weight:500; color:#131925; padding-bottom:3px; white-space:nowrap;">
+                  <a href="mailto:kaz@kazviskrealty.com" style="color:#131925; text-decoration:none;">kaz@kazviskrealty.com</a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-family:'Manrope',Arial,sans-serif; font-size:8px; font-weight:700; color:#b8afa5; letter-spacing:0.11em; text-transform:uppercase; padding-right:10px; vertical-align:middle; white-space:nowrap;">W</td>
+                <td style="font-family:'Manrope',Arial,sans-serif; font-size:11px; font-weight:500; color:#131925; white-space:nowrap;">
+                  <a href="https://kazviskrealty.com" style="color:#131925; text-decoration:none;">kazviskrealty.com</a>
+                </td>
+              </tr>
+            </table>
+
+            <!-- DRE -->
+            <div style="font-family:'Manrope',Arial,sans-serif; font-size:8px; color:#c8c0b6; margin-top:5px; white-space:nowrap; letter-spacing:0.02em;">
+              CA DRE #02318574 &nbsp;·&nbsp; Vanguard Properties
+            </div>
+
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <button class="copy-btn" id="copyBtn" onclick="copySignature()">Copy Signature</button>
+
+  <p class="note">
+    Paste into Gmail → Settings → See all settings → Signature<br>
+    Swap image path to a hosted URL when the site goes live
+  </p>
+
+  <div class="toast" id="toast">Copied to clipboard</div>
+
+  <script>
+    function copySignature() {
+      const sig = document.getElementById('sig');
+      const range = document.createRange();
+      range.selectNode(sig);
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+
+      let ok = false;
+      try { ok = document.execCommand('copy'); } catch(e) {}
+      sel.removeAllRanges();
+
+      const btn   = document.getElementById('copyBtn');
+      const toast = document.getElementById('toast');
+
+      if (ok) {
+        btn.textContent = 'Copied';
+        btn.classList.add('done');
+        toast.classList.add('show');
+        setTimeout(() => {
+          btn.textContent = 'Copy Signature';
+          btn.classList.remove('done');
+          toast.classList.remove('show');
+        }, 2400);
+      } else {
+        const r2 = document.createRange();
+        r2.selectNode(sig);
+        window.getSelection().addRange(r2);
+        btn.textContent = 'Selected — press Cmd+C';
+      }
+    }
+  </script>
+
+</body>
+</html>
