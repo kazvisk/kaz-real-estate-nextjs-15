@@ -28,7 +28,7 @@ const items = [
 export default function WhyWorkWithMeSection() {
   return (
     <section
-      className="py-20 px-6 md:px-16"
+      className="py-28 px-6 md:px-16"
       style={{ backgroundColor: '#0a0d14', fontFamily: 'Manrope, sans-serif' }}
     >
       <div className="max-w-6xl mx-auto">
@@ -48,7 +48,7 @@ export default function WhyWorkWithMeSection() {
           transition={{ duration: 0.7, delay: 0.1 }}
           viewport={{ once: true }}
           className="text-white font-medium mb-12"
-          style={{ fontSize: 'clamp(1.6rem, 3.2vw, 2.8rem)', letterSpacing: '-0.02em' }}
+          style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', letterSpacing: '-0.02em' }}
         >
           The difference is in the details.
         </motion.h2>
@@ -61,7 +61,7 @@ export default function WhyWorkWithMeSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
               viewport={{ once: true, amount: 0.2 }}
-              className="flex items-start gap-6 py-6"
+              className="flex items-start gap-8 py-8"
               style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}
             >
               <span
@@ -71,10 +71,10 @@ export default function WhyWorkWithMeSection() {
                 {item.number}
               </span>
               <div>
-                <p className="text-white font-medium mb-1.5" style={{ fontSize: '1rem' }}>
+                <p className="text-white font-medium mb-2" style={{ fontSize: '1.2rem' }}>
                   {item.title}
                 </p>
-                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', lineHeight: '1.7' }}>
+                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '1.05rem', lineHeight: '1.75' }}>
                   {item.body}
                 </p>
               </div>

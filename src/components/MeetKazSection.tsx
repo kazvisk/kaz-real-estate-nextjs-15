@@ -7,7 +7,7 @@ export default function MeetKazSection() {
   return (
     <section
       id="meet-kaz"
-      className="py-20 px-6 md:px-16"
+      className="py-28 px-6 md:px-16"
       style={{ backgroundColor: '#0a0d14', fontFamily: 'Manrope, sans-serif' }}
     >
       <div className="max-w-6xl mx-auto">
@@ -54,7 +54,7 @@ export default function MeetKazSection() {
             <h2
               className="text-white font-medium mb-2"
               style={{
-                fontSize: 'clamp(1.8rem, 3vw, 2.5rem)',
+                fontSize: 'clamp(2.4rem, 4vw, 3.5rem)',
                 letterSpacing: '-0.02em',
               }}
             >
@@ -75,7 +75,7 @@ export default function MeetKazSection() {
 
             <p
               className="mb-5 leading-relaxed"
-              style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1rem' }}
+              style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.125rem', lineHeight: '1.8' }}
             >
               I&apos;m Kaz Viskanta, a San Francisco real estate agent passionate about
               helping people find their place in this city. Whether you&apos;re buying
@@ -86,7 +86,7 @@ export default function MeetKazSection() {
 
             <p
               className="mb-10 leading-relaxed"
-              style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1rem' }}
+              style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.125rem', lineHeight: '1.8' }}
             >
               As your local partner, I bring market knowledge, negotiation
               skills, and a modern approach to real estate — so you feel

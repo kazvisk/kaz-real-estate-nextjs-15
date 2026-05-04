@@ -13,7 +13,7 @@ const stats = [
 export default function MarketInsightsSection() {
   return (
     <section
-      className="py-20 px-6 md:px-16"
+      className="py-28 px-6 md:px-16"
       style={{ backgroundColor: '#0a0d14', fontFamily: 'Manrope, sans-serif' }}
     >
       <div className="max-w-6xl mx-auto">
@@ -33,7 +33,7 @@ export default function MarketInsightsSection() {
           transition={{ duration: 0.7, delay: 0.1 }}
           viewport={{ once: true }}
           className="text-white font-medium mb-10"
-          style={{ fontSize: 'clamp(1.6rem, 3.2vw, 2.8rem)', letterSpacing: '-0.02em' }}
+          style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', letterSpacing: '-0.02em' }}
         >
           The SF market, right now.
         </motion.h2>
@@ -46,7 +46,7 @@ export default function MarketInsightsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="rounded-xl p-6"
+              className="rounded-xl p-8"
               style={{
                 background: 'rgba(255,255,255,0.04)',
                 border: '1px solid rgba(255,255,255,0.08)',
@@ -54,7 +54,7 @@ export default function MarketInsightsSection() {
             >
               <p
                 className="text-white font-medium mb-2"
-                style={{ fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', letterSpacing: '-0.03em' }}
+                style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', letterSpacing: '-0.03em' }}
               >
                 {stat.value}
               </p>

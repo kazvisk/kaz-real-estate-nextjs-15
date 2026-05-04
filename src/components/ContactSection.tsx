@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 export default function ContactSection() {
   return (
     <section
-      className="py-24 px-6 md:px-16"
+      className="py-28 px-6 md:px-16"
       style={{ backgroundColor: '#0a0d14', fontFamily: 'Manrope, sans-serif' }}
     >
       <div className="max-w-6xl mx-auto">
@@ -29,7 +29,7 @@ export default function ContactSection() {
 
           <h2
             className="text-white font-medium mb-4"
-            style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', letterSpacing: '-0.02em' }}
+            style={{ fontSize: 'clamp(2.2rem, 4.5vw, 4rem)', letterSpacing: '-0.02em' }}
           >
             Ready to make a move?
           </h2>
@@ -38,8 +38,8 @@ export default function ContactSection() {
             className="mb-10 mx-auto"
             style={{
               color: 'rgba(255,255,255,0.5)',
-              fontSize: '1rem',
-              lineHeight: '1.7',
+              fontSize: '1.15rem',
+              lineHeight: '1.75',
               maxWidth: '440px',
             }}
           >
