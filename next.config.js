@@ -1,5 +1,44 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async headers() {
+    return [
+      {
+        source: '/email/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow, noarchive, noimageindex',
+          },
+        ],
+      },
+      {
+        source: '/Email/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow, noarchive, noimageindex',
+          },
+        ],
+      },
+      {
+        source: '/email-signature',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow, noarchive, noimageindex',
+          },
+        ],
+      },
+    ]
+  },
+  async rewrites() {
+    return [
+      { source: '/email/alex', destination: '/Email/alex/index.html' },
+      { source: '/email/jennifer', destination: '/Email/jennifer/index.html' },
+      { source: '/email/on-ellis', destination: '/Email/on-ellis/index.html' },
+      { source: '/email/onellis', destination: '/Email/on-ellis/index.html' },
+    ]
+  },
   images: {
     remotePatterns: [
       {
