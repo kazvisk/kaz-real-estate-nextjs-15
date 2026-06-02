@@ -33,11 +33,15 @@ const nextConfig = {
   },
   async rewrites() {
     return [
-      { source: '/email/alex', destination: '/Email/alex/index.html' },
-      { source: '/email/jennifer', destination: '/Email/jennifer/index.html' },
-      { source: '/email/on-ellis', destination: '/Email/on-ellis/index.html' },
-      { source: '/email/onellis', destination: '/Email/on-ellis/index.html' },
-      { source: '/email/:path*', destination: '/Email/:path*' },
+      { source: '/email/alex', destination: '/email/alex/index.html' },
+      { source: '/email/jennifer', destination: '/email/jennifer/index.html' },
+      { source: '/email/on-ellis', destination: '/email/on-ellis/index.html' },
+      { source: '/email/onellis', destination: '/email/on-ellis/index.html' },
+      { source: '/Email/alex', destination: '/email/alex/index.html' },
+      { source: '/Email/jennifer', destination: '/email/jennifer/index.html' },
+      { source: '/Email/on-ellis', destination: '/email/on-ellis/index.html' },
+      { source: '/Email/onellis', destination: '/email/on-ellis/index.html' },
+      { source: '/Email/:path*', destination: '/email/:path*' },
     ]
   },
   images: {
