@@ -37,6 +37,7 @@ const nextConfig = {
       { source: '/email/jennifer', destination: '/Email/jennifer/index.html' },
       { source: '/email/on-ellis', destination: '/Email/on-ellis/index.html' },
       { source: '/email/onellis', destination: '/Email/on-ellis/index.html' },
+      { source: '/email/:path*', destination: '/Email/:path*' },
     ]
   },
   images: {
